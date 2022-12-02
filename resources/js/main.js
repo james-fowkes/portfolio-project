@@ -68,8 +68,8 @@ window.addEventListener('scroll', function() {
     let containerPositionContact = document.getElementById('contact-section').getBoundingClientRect().bottom;
     let centralImage = document.getElementById('central-image')
     
-    this.document.querySelector('h1').innerHTML = scrollCoeff;
-    this.document.querySelectorAll('a')[0].innerHTML = pageBottom
+    // this.document.querySelector('h1').innerHTML = scrollCoeff;
+    // this.document.querySelectorAll('a')[0].innerHTML = pageBottom
     // this.document.querySelectorAll('a')[1].innerHTML = containerPositionAbout;
     // this.document.querySelectorAll('a')[2].innerHTML = containerPositionExperience;
     // this.document.querySelectorAll('a')[3].innerHTML = containerPositionContact;
