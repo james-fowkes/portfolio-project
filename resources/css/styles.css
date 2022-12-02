@@ -1,0 +1,340 @@
+
+/* UNIVERSAL */
+
+html {
+    background-color: #2E2E2E;
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 100;
+    color: #ECCDBC;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+
+
+/* MAIN */
+
+/* HOME */
+
+#home {
+    height: 100vh;
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 90;
+    font-weight: 200;
+    background-image: radial-gradient(30% 100% at top right, #2e2e2e 30%, transparent), radial-gradient(30% 100% at top left, #2e2e2e 50%, transparent);
+}
+
+/* logo */
+header #title-logo {
+    color: #c59d87;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    line-height: 1.5rem;
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+}
+
+
+/* nav */
+header nav {
+    margin-top: 1.5rem;
+    margin-right: 3rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: right;
+}
+
+header nav a {
+    color: #c59d87;;
+    text-decoration: none;
+    background-image: linear-gradient(#d99a5a, #d99a5a);
+    background-size: 0% 0.05em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+    }
+
+header nav a:hover,
+header nav a:focus,
+header nav a:active {
+background-size: 100% 0.05em;
+}
+
+
+
+/* roles */
+   #roles {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 55vh 10vw 0 10vw;
+   }
+
+    #roles-title {
+        text-transform: capitalize;
+        font-size: 5rem;
+        font-weight: 100;
+        text-align: left;
+    }
+
+
+/* central image */
+
+    #central-image-container {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: -1;
+    }
+
+    #central-image {
+        height: 50vh;
+        display: block;
+        margin: 0 auto 0 auto;
+        padding-top: 25vh;
+        z-index: -1;
+        opacity: 1;
+    }
+
+/* quote */
+    #container {
+        display: block;
+        position: absolute;
+        margin-right: 2vw;
+        right: 5%;
+        top: 40%;
+        width: 25rem;
+        height: 10rem;
+        overflow: hidden;
+    }
+
+    .carousel {
+        display: flex;
+        width: 100%;
+        animation: quote-carousel 20s infinite;
+    }
+
+    .quote {
+        font-size: 2rem;
+        margin-bottom: 10rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .quote h3 {
+        font-size: 1rem;
+        width: 25rem;
+    }
+
+    .quote hr {
+        background-color: #c59d87;
+        color: #c59d87;
+        border: none;
+        height: 0.06em;
+        text-decoration: none;
+    }
+
+    @keyframes quote-carousel {
+        0%,
+        30% { 
+            transform:translateX(0rem) 
+        }
+        33%,
+        63% { 
+            transform:translateX(-25rem) 
+        }
+        66%,
+        98% { 
+            transform:translateX(-50rem) 
+        }
+        100% {
+            transform: translateX(0rem);
+        }
+    }
+
+    /* arrow */
+    #container #downwards-arrow {
+        text-align: center;
+        height: 10rem;
+    }
+
+/* about section */
+
+    #about {
+        display: flex;
+        margin: 0 20rem 0 20rem;
+        z-index: 20;
+        height: 100vh;
+        align-items: center;
+    }
+
+    #about h2 {
+        font-size: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    #about p {
+        width: 30rem;
+        margin-right: 10rem;
+        margin-left: 5rem;
+        line-height: 1.5;
+        font-size: 1.2rem;
+    }
+
+    #about-image img {
+        height: 30rem;
+        z-index: 20;
+        filter: grayscale(80%);
+        margin-top: 1rem;
+    }
+
+/* experience overlay */
+
+    #menu-active-overlay {
+        z-index: 800;
+        position: fixed;
+        top: 0;
+        height: 200vh;
+        width: 200vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        visibility: hidden;
+    }
+
+    .side-overlay-experience {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        z-index: 900;
+        height: 100vh;
+        width: 50vw;
+        background-color: #ECCDBC;
+        color: #2e2e2e;
+        text-align: center;
+        transform: translateX(50vw);
+        transition: transform 0.3s ease-in-out;
+        font-weight: 200;
+    }
+
+    .close-button {
+        height: 5vh;
+        margin: 2rem 0 2rem 80%;
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform 0.1s ease-in-out;
+    }
+
+    .close-button:hover {
+        transform: scale(1.2);
+        transition: transform 0.1s ease-in-out; 
+    }
+
+    .side-overlay-experience .mac-image {
+        width: 50%;
+        height: auto;
+        margin: 2rem auto;
+    }
+
+    .side-overlay-experience h3 {
+        font-size: 2rem;
+        margin: 6rem auto 2rem auto;
+    }
+
+    .side-overlay-experience h4{
+        font-size: 1.5rem;
+    }
+
+    .side-overlay-experience h5{
+        font-size: 1rem;
+    }
+
+    .side-overlay-experience p {
+        font-size: 1rem;
+        line-height: 1.3;
+        width: 60%;
+        margin: 2rem auto;
+    }
+
+/* experience section */
+
+    #experience {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+    }
+
+    #experience-container {
+        width: 50%;
+    }
+
+    #experience h2 {
+        font-size: 5rem;
+        margin-bottom: 5rem;
+        margin-left: 20rem;
+    }
+
+    .experience-item h3 {
+        font-size: 2rem;
+    }
+
+    .experience-item h4 {
+        font-size: 1.5rem;
+    }
+
+    .experience-item {
+        display: flex;
+        line-height: 1.5;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 1.5rem;
+        padding-left: 20rem;
+        width: 35rem;
+    }
+
+    .experience-item h5 {
+        padding-bottom: 0.4rem;
+        border-bottom: 0.05em solid #c59d87;
+    }
+
+    .arrow-right {
+        height: auto;
+        width: 0.5rem;
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .arrow-right:hover {
+        cursor: pointer;
+        transform: translateX(0.5rem);
+        transition: transform 0.3s ease-in-out;
+    }
+
+/* contact section */
+
+#contact-section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+#contact-section h2 {
+    font-size: 5rem;
+    margin-left: 20rem;
+    padding-right: 3rem;
+}
