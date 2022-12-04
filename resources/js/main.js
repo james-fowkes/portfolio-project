@@ -133,14 +133,26 @@ if (this.window.innerWidth < 900) {
 }
 
     // dims and subsequently brightens central image based on scroll position
-    if (scrollCoeff > 0) {
-        centralImage.style.opacity = 1 - ((scrollCoeff) * 3);
+    if (this.window.innerWidth >= 900) {
+        if (scrollCoeff > 0) {
+            centralImage.style.opacity = 1 - ((scrollCoeff) * 3);
+        }
+        if ((scrollCoeff > 0.25) && (scrollCoeff < 0.5)) {
+            centralImage.style.opacity = 0.25;
+        }
+        if (scrollCoeff >= 0.5) {
+            centralImage.style.opacity = (scrollCoeff - 0.25) + (pageBottom/1000);
+        } 
     }
-    if ((scrollCoeff > 0.25) && (scrollCoeff < 0.5)) {
-        centralImage.style.opacity = 0.25;
+    if (this.window.innerWidth < 900) {
+        if (scrollCoeff > 0) {
+            centralImage.style.opacity = 1 - ((scrollCoeff) * 10);
+        }
+        if ((scrollCoeff > 0.08) && (scrollCoeff < 0.5)) {
+            centralImage.style.opacity = 0.24;
+        }
+        if (scrollCoeff >= 0.5) {
+            centralImage.style.opacity = (scrollCoeff - 0.25) + (pageBottom/1000);
+        } 
     }
-    if (scrollCoeff >= 0.5) {
-        centralImage.style.opacity = (scrollCoeff - 0.25) + (pageBottom/1000);
-    } 
-
 })
