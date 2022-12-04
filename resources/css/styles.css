@@ -1,6 +1,10 @@
 
 /* UNIVERSAL */
 
+* {
+    outline: solid 1px red;
+}
+
 html {
     background-color: #2E2E2E;
     font-size: 16px;
@@ -9,12 +13,18 @@ html {
     color: #ECCDBC;
     scroll-behavior: smooth;
     max-width: 100vw;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 @media only screen and (max-width: 900px) {
     html {
         font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 11px;
     }
 }
 
@@ -74,6 +84,16 @@ header nav a:active {
     background-size: 100% 0.05em;
     }
 
+@media only screen and (max-width: 500px) {
+    header #title-logo {
+        padding-left: 1rem;
+    }
+
+    header nav {
+        padding-right: 1rem;
+    }
+
+}
 
 
 /* roles */
@@ -81,7 +101,6 @@ header nav a:active {
    #roles {
         position: relative;
         top: 65vh;
-        left: 3vh;
    }
 
     #roles-title {
@@ -89,6 +108,7 @@ header nav a:active {
         font-size: 5rem;
         font-weight: 100;
         text-align: left;
+        padding-left: 2rem;
     }
 
     @media only screen and (max-width: 900px) {
@@ -98,6 +118,12 @@ header nav a:active {
         
         #roles-title {
             text-align: center;
+            padding-left: 0;
+        }
+
+        #roles-title h2 {
+            background:radial-gradient(ellipse at 50% 50%, rgba(46, 46, 34, 0.3) 7%, rgba(0, 188, 212, 0) 66%);
+
         }
     }    
 
@@ -131,8 +157,8 @@ header nav a:active {
 
 /* quote */
     #container {
-        display: none;
         position: absolute;
+        z-index: 10;
         margin-right: 2vw;
         right: 1%;
         top: 40%;
@@ -205,8 +231,9 @@ header nav a:active {
         flex-direction: row;
         height: 100%;
         width: 100vw;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
+        margin-left: 10vw;
     }
 
 
@@ -217,7 +244,7 @@ header nav a:active {
 
     #about p {
         width: 40vw;
-        margin-right: 10vw;
+        margin-right: 5vw;
         margin-left: 5vw;
         line-height: 1.5;
         font-size: 1.2rem;
@@ -232,23 +259,49 @@ header nav a:active {
     }
 
     @media only screen and (max-width: 900px) {
-        #about-container {
-            flex-direction: column;
-            width: 100%;
-            padding-left: 10vw;
-        }
-
         #about-image {
             display: flex;
             justify-content: center;
-            height: 20vh;
+            height: 50vh;
+            width: 30vw;
+            overflow: hidden;
         }
 
         #about-image img {
             height: 100%;
             width: auto;
         }
-    }     
+    }
+    
+    @media only screen and (max-width: 500px) {
+        #about-container {
+            flex-direction: column;
+            margin-left: 0;
+        }
+
+        #about p {
+            width: 85vw;
+            margin-right: 5vw;
+            margin-left: 5vw;
+            line-height: 1.5;
+            font-size: 1.2rem;
+        }
+
+        #about-image {
+            display: flex;
+            justify-content: center;
+            height: 30vh;
+            width: 70vw;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        #about-image img {
+            height: 100%;
+            width: auto;
+        }
+
+    }
 
 /* experience overlay */
 
@@ -318,6 +371,15 @@ header nav a:active {
         margin: 2rem auto;
     }
 
+    @media only screen and (max-width: 900px) {
+        .side-overlay-experience {
+            width: 100%;
+            transform: translateX(100vw);
+        }
+    }     
+
+
+    
 /* experience section */
 
     #experience {
@@ -326,10 +388,16 @@ header nav a:active {
         height: 100vh;
         width: 100%;
         justify-content: center;
+        align-items: flex-start;
+    }
+
+    #experience-box {
+        margin-left: 10vw;
     }
 
     #experience-container {
-        width: 50vw;
+        width: fit-content;
+        margin-left: 4rem;
     }
 
     #experience h2 {
@@ -352,7 +420,7 @@ header nav a:active {
         align-items: center;
         justify-content: space-between;
         padding-bottom: 1.5rem;
-        width: 50vw 
+        width: 40vw; 
        }
 
     .experience-item h5 {
@@ -373,10 +441,28 @@ header nav a:active {
         transition: transform 0.3s ease-in-out;
     }
 
+    @media only screen and (max-width: 500px) {
+        #experience-box {
+            margin-left: 1rem;
+        }
+
+        #experience-container {
+            margin-left: 0;
+        }
+
+        .arrow-right img {
+            height: auto;
+            width: 15rem;
+            padding-left: 1rem;
+        }
+    }
+
+
 /* contact section */
 
     #contact-section {
         display: flex;
+        flex-direction: row;
         align-items: center;
         height: 100vh;
         width: 100%;
@@ -384,6 +470,7 @@ header nav a:active {
 
     #contact-section h2 {
         font-size: 5rem;
+        margin-left: 10vw;
     }
 
     .side-overlay-contact {
@@ -457,4 +544,26 @@ header nav a:active {
 
     .side-overlay-contact form #message {
         height: 200px;
+    }
+
+    @media only screen and (max-width: 900px) {
+        .side-overlay-contact {
+            width: 100%;
+            transform: translateX(100vw);
+        }
+
+    }     
+
+    @media only screen and (max-width: 500px) {
+        #contact-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 0;
+            margin-left: 0; 
+        }
+        #contact-section img {
+            padding-left: 20vw;
+            padding-top: 1rem;
+        }                 
     }

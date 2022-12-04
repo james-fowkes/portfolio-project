@@ -108,6 +108,8 @@ window.addEventListener('scroll', function() {
     }
 
     // moves central image right based on scroll position, enlargens it at the bottom of the page
+    
+if (this.window.innerWidth >= 900) {
     if ((scrollCoeff > 0.25) && (scrollCoeff < 0.5)) {    
         centralImage.style.paddingLeft = `${(scrollCoeff - 0.25) * 3300}px`;
         centralImage.style.height = '';
@@ -118,7 +120,17 @@ window.addEventListener('scroll', function() {
         centralImage.style.paddingLeft = '';
         centralImage.style.height = '';
     }
-
+}
+if (this.window.innerWidth < 900) {
+    if ((scrollCoeff > 0.25) && (scrollCoeff < 0.5)) {    
+        centralImage.style.paddingLeft = `${(scrollCoeff - 0.25) * 2200}px`;
+        centralImage.style.height = '';
+    } else if (scrollCoeff >= 0.5) {
+        centralImage.style.paddingLeft = `${0.25 * 2200}px`
+    } else {
+        centralImage.style.paddingLeft = '';
+    }
+}
 
     // dims and subsequently brightens central image based on scroll position
     if (scrollCoeff > 0) {
