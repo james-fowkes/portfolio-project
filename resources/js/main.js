@@ -3,14 +3,17 @@
 let experienceButtonOne = document.getElementsByClassName('arrow-right')[0];
 let experienceButtonTwo = document.getElementsByClassName('arrow-right')[1];
 let experienceButtonThree = document.getElementsByClassName('arrow-right')[2];
+let contactMenuButton = document.getElementsByClassName('arrow-right')[3];
 
 let experienceMenu0ne = document.getElementsByClassName('side-overlay-experience')[0];
 let experienceMenuTwo = document.getElementsByClassName('side-overlay-experience')[1];
 let experienceMenuThree = document.getElementsByClassName('side-overlay-experience')[2];
+let contactMenu = document.getElementsByClassName('side-overlay-contact')[0];
 
 let closeButtonOne = document.getElementsByClassName('close-button')[0];
 let closeButtonTwo = document.getElementsByClassName('close-button')[1];
 let closeButtonThree = document.getElementsByClassName('close-button')[2];
+let closeButtonFour = document.getElementsByClassName('close-button')[3]
 
 let menuOverlay = document.getElementById('menu-active-overlay');
 
@@ -50,12 +53,25 @@ hideMenuThree = () => {
     menuOverlay.style.visibility = '';
 }
 
+showContactMenu = () => {
+    contactMenu.style.transform = `translateX(${0}vh)`;
+    menuOverlay.style.visibility = 'visible';
+}
+
+hideContactMenu = () => {
+    contactMenu.style.transform = '';
+    menuOverlay.style.visibility = '';
+}
+
 closeButtonOne.addEventListener('click', hideMenuOne)
 experienceButtonOne.addEventListener('click', showMenuOne)
 closeButtonTwo.addEventListener('click', hideMenuTwo)
 experienceButtonTwo.addEventListener('click', showMenuTwo)
 closeButtonThree.addEventListener('click', hideMenuThree)
 experienceButtonThree.addEventListener('click', showMenuThree)
+closeButtonFour.addEventListener('click', hideContactMenu)
+contactMenuButton.addEventListener('click', showContactMenu)
+
 
 // SCROLL EVENTS
 
