@@ -107,7 +107,6 @@ header nav a:active {
         text-align: left;
         padding-left: 2rem;
         background-color: none;
-        /* background:radial-gradient(ellipse at 50% 50%, rgba(46, 46, 34, 0.3) 7%, rgba(0, 188, 212, 0) 66%); */
     }
 
     #roles-title h2:nth-child(2) {
@@ -445,7 +444,15 @@ header nav a:active {
 
     @media only screen and (max-width: 500px) {
         #experience-box {
-            margin-left: 1rem;
+            margin-left: 2rem;
+        }
+
+        .experience-item {
+            width: 60vw;
+        }
+
+        .experience-item h3 {
+            font-size: 2rem;    
         }
 
         #experience-container {
@@ -454,7 +461,7 @@ header nav a:active {
 
         .arrow-right img {
             height: auto;
-            width: 15rem;
+            width: 25vw;
             padding-left: 1rem;
         }
     }
@@ -558,14 +565,12 @@ header nav a:active {
 
     @media only screen and (max-width: 500px) {
         #contact-section {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
             padding-left: 0;
             margin-left: 0; 
         }
         #contact-section img {
-            padding-left: 20vw;
+            padding-left: 5vw;
             padding-top: 1rem;
+            width: 25vw;
         }                 
     }}
