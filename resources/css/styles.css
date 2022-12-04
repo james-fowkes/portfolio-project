@@ -9,7 +9,6 @@ html {
     color: #ECCDBC;
     scroll-behavior: smooth;
     max-width: 100vw;
-    /* overflow-x: hidden; */
 }
 
 @media only screen and (max-width: 900px) {
@@ -97,7 +96,7 @@ header nav a:active {
 
    #roles {
         position: relative;
-        top: 65vh;
+        top: 44vh;
    }
 
     #roles-title {
@@ -112,6 +111,7 @@ header nav a:active {
     #roles-title h2:nth-child(2) {
         font-size: 1.5rem;
         text-transform: uppercase;
+        padding-left: 1rem;
     }
 
     @media only screen and (max-width: 900px) {
@@ -125,11 +125,7 @@ header nav a:active {
             background-color: 2E2E2E;
 
         }
-
-
-
-
-
+    }
 /* central image */
 
     #central-image-container {
@@ -377,7 +373,36 @@ header nav a:active {
             width: 100%;
             transform: translateX(100vw);
         }
-    }     
+    }
+    
+    @media only screen and (max-width: 500px) {
+        .side-overlay-experience .mac-image {
+            width: 70%;
+            height: auto;
+            margin: 2rem auto;
+        }
+    
+        .side-overlay-experience h3 {
+            font-size: 3rem;
+            margin: 6rem 1rem 2rem 1rem;
+        }
+    
+        .side-overlay-experience h4{
+            font-size: 2rem;
+        }
+    
+        .side-overlay-experience h5{
+            font-size: 1.5rem;
+        }
+    
+        .side-overlay-experience p {
+            font-size: 1.5rem;
+            line-height: 1.3;
+            width: 80%;
+            margin: 2rem auto;
+        }
+    
+    }
 
 
     
@@ -573,4 +598,4 @@ header nav a:active {
             padding-top: 1rem;
             width: 25vw;
         }                 
-    }}
+    }
